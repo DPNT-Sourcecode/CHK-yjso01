@@ -6,7 +6,7 @@ class HelloSolution:
         if not friend_name:
             raise ValueError("friend_name is required")
         else:
-            return f"Hello World!"
+            return f"Hello World"
 
         # raise NotImplementedError()
     # IS THERE MEANT TO BE A TEST FILE FOR THIS CHALLENGE???????
@@ -29,8 +29,3 @@ class HelloSolution:
     # IS THERE MEANT TO BE A TEST FILE FOR THIS CHALLENGE???????
     # IS THERE MEANT TO BE A TEST FILE FOR THIS CHALLENGE???????
     # IS THERE MEANT TO BE A TEST FILE FOR THIS CHALLENGE???????
-
-
-
-
-
