@@ -6,5 +6,3 @@ class SumSolution:
             return x + y
         else:
             raise NotImplementedError()
-
-
