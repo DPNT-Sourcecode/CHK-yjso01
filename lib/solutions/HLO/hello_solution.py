@@ -6,7 +6,8 @@ class HelloSolution:
         if not friend_name:
             raise ValueError("friend_name cannot be empty")
         else:
-            return f"Hello {friend_name}!"
+            return f"Hello {friend_name}"
 
         # raise NotImplementedError()
+
 
