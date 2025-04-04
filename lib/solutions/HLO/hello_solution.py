@@ -3,4 +3,6 @@ class HelloSolution:
     
     # friend_name = unicode string
     def hello(self, friend_name):
-        raise NotImplementedError()
+        print(f"Hello {friend_name}!")
+        # raise NotImplementedError()
+
