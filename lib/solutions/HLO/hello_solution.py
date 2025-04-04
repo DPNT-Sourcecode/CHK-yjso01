@@ -5,4 +5,3 @@ class HelloSolution:
     def hello(self, friend_name):
         print(f"Hello {friend_name}!")
         # raise NotImplementedError()
-
