@@ -38,11 +38,12 @@ class CheckoutSolution:
 
         # check for 5A's
         if count_A >= 5:
-            special_offer_A = count_A // 5 * 200
+            special_offer_5A = count_A // 5 * 200
             if count_A % 5 >= 3:
-                special_offer_A += (count_A % 5) // 3 * 130
+                special_offer_3A = (count_A % 5) // 3 * 130
+                price_A = count_A % 5 % 3 * 50
             else:
-                special_offer_A += count_A % 5 * 50
+                price_A = count_A % 5 * 50
   
             price_A = count_A % 5 * 50
         else:
@@ -68,6 +69,7 @@ class CheckoutSolution:
         total_price = special_offer_A + price_A + special_offer_B + price_B + price_C + price_D + price_E
 
         return total_price
+
 
 
 
