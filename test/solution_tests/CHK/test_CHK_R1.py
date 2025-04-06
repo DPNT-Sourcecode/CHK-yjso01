@@ -11,6 +11,7 @@ def test_special_offers():
     assert CheckoutSolution().checkout("AAA") == 130
     assert CheckoutSolution().checkout("BB") == 45
     assert CheckoutSolution().checkout("EEB") == 80
+    assert CheckoutSolution().checkout("AAAAA") == 200
 
 def test_combined_items():
     assert CheckoutSolution().checkout("ABCD") == 115
@@ -24,4 +25,5 @@ def test_invalid_input():
     assert CheckoutSolution().checkout("AABCF") == -1
     assert CheckoutSolution().checkout("123") == -1
     assert CheckoutSolution().checkout("") == 0
+
 

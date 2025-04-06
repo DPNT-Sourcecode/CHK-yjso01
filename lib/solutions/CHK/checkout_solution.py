@@ -36,6 +36,19 @@ class CheckoutSolution:
         # calculate the total price
         free_B = count_E // 2
 
+        # check for 5A's
+        if count_A >= 5:
+            special_offer_A = count_A // 5 * 200
+            if count_A % 5 >= 3:
+                special_offer_A += (count_A % 5) // 3 * 130
+            else:
+                special_offer_A += count_A % 5 * 50
+  
+            price_A = count_A % 5 * 50
+        else:
+            special_offer_A = 0
+            price_A = count_A * 50
+
         special_offer_A = count_A // 3 * 130
         price_A = count_A % 3 * 50
 
@@ -55,6 +68,7 @@ class CheckoutSolution:
         total_price = special_offer_A + price_A + special_offer_B + price_B + price_C + price_D + price_E
 
         return total_price
+
 
 
 
