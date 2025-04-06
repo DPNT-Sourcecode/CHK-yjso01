@@ -4,11 +4,12 @@ class CheckoutSolution:
     # skus = unicode string
     def checkout(self, skus):
     # calculate the total checkout price
-    # item A: 50, B: 30, C: 20, D: 15, E: 40
+    # item A: 50, B: 30, C: 20, D: 15, E: 40, F: 10
     # special offers:
         # 5A 200, 3A 130,
         # 2B for 45
         # 2E get 1B free
+        # 2F get 1F free
     # illegal input returns -1
 
         count_A = 0
@@ -16,6 +17,7 @@ class CheckoutSolution:
         count_C = 0
         count_D = 0
         count_E = 0
+        count_F = 0
         total_price = 0
 
         # count the number of each item
@@ -30,6 +32,8 @@ class CheckoutSolution:
                 count_D += 1
             elif item == "E":
                 count_E += 1
+            elif item == "F":
+                count_F += 1
             else:
                 return -1
         
@@ -70,4 +74,5 @@ class CheckoutSolution:
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E
 
         return total_price
+
 
