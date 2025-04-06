@@ -50,11 +50,12 @@ class CheckoutSolution:
 
         price_D = count_D * 15
 
-        price_E = (count_E // 2) * 40
+        price_E = count_E * 40
 
         total_price = special_offer_A + price_A + special_offer_B + price_B + price_C + price_D + price_E
 
         return total_price
+
 
 
 
