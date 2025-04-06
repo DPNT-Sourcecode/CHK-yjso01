@@ -17,6 +17,6 @@ def test_combined_items():
 
 def test_invalid_input():
     assert CheckoutSolution().checkout("E") == -1
-    assert CheckoutSolution().checkout("AABCE") == -1
+    assert CheckoutSolution().checkout("AABCF") == -1
     assert CheckoutSolution().checkout("123") == -1
     assert CheckoutSolution().checkout("") == 0

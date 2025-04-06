@@ -28,19 +28,24 @@ class CheckoutSolution:
                 count_C += 1
             elif item == "D":
                 count_D += 1
+            elif item == "E":
+                count_E += 1
             else:
                 return -1
         
         # calculate the total price
         special_offer_A = count_A // 3 * 130
         price_A = count_A % 3 * 50
+
         special_offer_B = count_B // 2 * 45
         price_B = count_B % 2 * 30
+
         price_C = count_C * 20
+
         price_D = count_D * 15
+
+        special_offer_E = count_E // 2
+
         total_price = special_offer_A + price_A + special_offer_B + price_B + price_C + price_D
+
         return total_price
-
-
-
-
