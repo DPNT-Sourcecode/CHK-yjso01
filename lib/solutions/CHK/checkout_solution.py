@@ -39,8 +39,12 @@ class CheckoutSolution:
         special_offer_A = count_A // 3 * 130
         price_A = count_A % 3 * 50
 
-        special_offer_B = count_B // 2 * 45
-        price_B = count_B % 2 * 30
+        # check if there are more free B's than B's in the cart
+        if free_B > count_B:
+            price_B, special_offer_B = 0, 0
+        else:
+            special_offer_B = (count_B - free_B) // 2 * 45
+            price_B = (count_B - free_B) % 2 * 30
 
         price_C = count_C * 20
 
@@ -49,4 +53,5 @@ class CheckoutSolution:
         total_price = special_offer_A + price_A + special_offer_B + price_B + price_C + price_D
 
         return total_price
+
 
