@@ -34,6 +34,8 @@ class CheckoutSolution:
                 return -1
         
         # calculate the total price
+        free_B = count_E // 2
+
         special_offer_A = count_A // 3 * 130
         price_A = count_A % 3 * 50
 
@@ -44,8 +46,7 @@ class CheckoutSolution:
 
         price_D = count_D * 15
 
-        special_offer_E = count_E // 2
-
         total_price = special_offer_A + price_A + special_offer_B + price_B + price_C + price_D
 
         return total_price
+
