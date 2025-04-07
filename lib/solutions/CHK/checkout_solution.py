@@ -19,11 +19,14 @@ class CheckoutSolution:
         # count_E = 0
         # count_F = 0
         prices = [50, 30, 20, 15, 40, 10, 20, 10, 35, 60, 80, 90, 15, 40, 10, 50, 30, 50, 30, 20, 40, 50, 20, 90, 10, 15]
-        count = [[0]*26]
+        count = [0]*26
         total_price = 0
 
         # count the number of each item
-
+        for item in skus:
+            if ord(item) < 65 or ord(item) > 90:
+                return -1
+            count[ord(item) - 65] += 1
         # for item in skus:
         #     if item == "A":
         #         count_A += 1
@@ -41,8 +44,8 @@ class CheckoutSolution:
         #         return -1
         
         # calculate the total price
-        free_B = count_E // 2
-
+        free_B = count[ord("E") - 65] // 2
+    
         # check for 5A's, 3A's and A's
         if count_A >= 5:
             special_offer_5A = count_A // 5 * 200
@@ -84,3 +87,4 @@ class CheckoutSolution:
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
+
