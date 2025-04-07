@@ -134,7 +134,7 @@ class CheckoutSolution:
 
         # 2V for 90, 3V for 130 offer
         count_V = count[ord("V") - 65]
-        
+
         if count_V >= 3:
             special_offer_3V = count_V // 3 * 130
             if count_V % 3 >= 2:
@@ -151,6 +151,10 @@ class CheckoutSolution:
             else:
                 special_offer_3V, special_offer_2V = 0, 0
                 price_V = count_V * 50
+
+        for i in range(26):
+            if count[i] > 0 and count[i] not in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V"]:
+                total_price += count[i] * prices[i]
 
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
