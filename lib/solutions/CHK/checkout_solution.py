@@ -140,7 +140,7 @@ class CheckoutSolution:
             price_Q, special_offer_Q = 0, 0
         else:
             special_offer_Q = (count_Q - free_Q) // 3 * 80
-            price_Q = (count_Q - free_Q) % 3 * 50
+            price_Q = (count_Q - free_Q) % 3 * 30
 
         total_Q = special_offer_Q + price_Q
         total_R = price_R
@@ -185,4 +185,3 @@ class CheckoutSolution:
                 total_price += count[i] * prices[i]
 
         return total_price
-
