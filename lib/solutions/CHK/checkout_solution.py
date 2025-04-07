@@ -111,6 +111,47 @@ class CheckoutSolution:
             special_offer_5P = 0
             price_P = count_P * 50
 
+        # 3Q for 80 offer and 3R get one Q free offer
+        count_Q = count[ord("Q") - 65]
+        count_R = count[ord("R") - 65]
+
+        free_Q = count_R // 3
+        if free_Q > count_Q:
+            price_Q, special_offer_Q = 0, 0
+        else:
+            special_offer_Q = (count_Q - free_Q) // 3 * 80
+            price_Q = (count_Q - free_Q) % 3 * 50
+
+        # 3U get one U free offer
+        count_U = count[ord("U") - 65]
+  
+        if count_U >= 4:
+            special_offer_U = 3 * (count_U // 4) * 40
+            price_U = count_U % 4 * 40
+        else:
+            special_offer_U = 0
+            price_U = count_U * 40
+
+        # 2V for 90, 3V for 130 offer
+        count_V = count[ord("V") - 65]
+        
+        if count_V >= 3:
+            special_offer_3V = count_V // 3 * 130
+            if count_V % 3 >= 2:
+                special_offer_2V = (count_V % 3) // 2 * 90
+                price_V = count_V % 3 % 2 * 50
+            else:
+                special_offer_2V = 0
+                price_V = count_V % 3 * 50
+        else:
+            if count_V >= 2:
+                special_offer_3V = 0
+                special_offer_2V = count_V // 2 * 90
+                price_V = count_V % 2 * 50
+            else:
+                special_offer_3V, special_offer_2V = 0, 0
+                price_V = count_V * 50
+
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
