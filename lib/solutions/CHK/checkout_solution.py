@@ -56,6 +56,8 @@ class CheckoutSolution:
             special_offer_F = 0
             price_F = count_F * 10
 
+        # 5H for 45 and 10H for 80 offer
+
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
