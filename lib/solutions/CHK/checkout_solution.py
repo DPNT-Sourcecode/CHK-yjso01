@@ -90,10 +90,10 @@ class CheckoutSolution:
         count_K = count[ord("K") - 65]
         if count_K >= 2:
             special_offer_2K = count_K // 2 * 120
-            price_K = count_K % 2 * 80
+            price_K = count_K % 2 * 70
         else:
             special_offer_2K = 0
-            price_K = count_K * 80
+            price_K = count_K * 70
 
         total_K = special_offer_2K + price_K
         total_price += total_K
@@ -212,3 +212,4 @@ class CheckoutSolution:
                 total_price += count[i] * prices[i]
 
         return total_price
+
