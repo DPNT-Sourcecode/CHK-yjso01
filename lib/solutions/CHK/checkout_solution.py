@@ -3,7 +3,7 @@ class CheckoutSolution:
 
     # skus = unicode string
     def checkout(self, skus):
-        prices = [50, 30, 20, 15, 40, 10, 20, 10, 35, 60, 80, 90, 15, 40, 10, 50, 30, 50, 30, 20, 40, 50, 20, 90, 10, 50]
+        prices = [50, 30, 20, 15, 40, 10, 20, 10, 35, 60, 70, 90, 15, 40, 10, 50, 30, 50, 20, 20, 40, 50, 20, 17, 20, 21]
         count = [0]*26
         total_price = 0
 
@@ -86,10 +86,10 @@ class CheckoutSolution:
 
         total_H = special_offer_10H + special_offer_5H + price_H
         total_price += total_H
-        # 2k for 150 offer
+        # 2k for 120 offer
         count_K = count[ord("K") - 65]
         if count_K >= 2:
-            special_offer_2K = count_K // 2 * 150
+            special_offer_2K = count_K // 2 * 120
             price_K = count_K % 2 * 80
         else:
             special_offer_2K = 0
