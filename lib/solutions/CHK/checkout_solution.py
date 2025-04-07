@@ -180,6 +180,9 @@ class CheckoutSolution:
         total_V = special_offer_3V + special_offer_2V + price_V
         total_price += total_V
 
+        # buy any 3 of (S,T,X,Y,Z) for 45 offer
+        
+
         for i in range(26):
             if count[i] > 0 and chr(i+65) not in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V"]:
                 total_price += count[i] * prices[i]
