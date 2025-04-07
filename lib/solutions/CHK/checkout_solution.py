@@ -18,8 +18,8 @@ class CheckoutSolution:
         # count_D = 0
         # count_E = 0
         # count_F = 0
-        count = [0] * 26
-
+        prices = [50, 30, 20, 15, 40, 10, 20, 10, 35, 60, 80, 90, 15, 40, 10, 50, 30, 50, 30, 20, 40, 50, 20, 90, 10, 15]
+        count = [[0]*26]
         total_price = 0
 
         # count the number of each item
