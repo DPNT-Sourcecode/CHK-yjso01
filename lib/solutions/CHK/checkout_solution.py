@@ -19,6 +19,7 @@ class CheckoutSolution:
         count_B = count[ord("B") - 65]
 
         free_B = count_E // 2
+        price_E = count_E * 40
 
         if free_B > count_B:
             price_B, special_offer_B = 0, 0
@@ -27,7 +28,8 @@ class CheckoutSolution:
             price_B = (count_B - free_B) % 2 * 30
         
         total_B = special_offer_B + price_B
-        total_price += total_B
+        total_E = price_E
+        total_price += total_B + total_E
         # 5A's for 200 and 3A's for 130 offer
         count_A = count[ord("A") - 65]
 
@@ -183,3 +185,4 @@ class CheckoutSolution:
                 total_price += count[i] * prices[i]
 
         return total_price
+
