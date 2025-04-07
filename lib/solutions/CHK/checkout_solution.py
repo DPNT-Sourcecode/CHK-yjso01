@@ -181,10 +181,18 @@ class CheckoutSolution:
         total_price += total_V
 
         # buy any 3 of (S,T,X,Y,Z) for 45 offer
-        
+        count_S = count[ord("S") - 65]
+        count_T = count[ord("T") - 65]
+        count_X = count[ord("X") - 65]
+        count_Y = count[ord("Y") - 65]
+        count_Z = count[ord("Z") - 65]
+
+        item_group = [count for count in [count_S, count_T, count_X, count_Y, count_Z]]
+
 
         for i in range(26):
             if count[i] > 0 and chr(i+65) not in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V"]:
                 total_price += count[i] * prices[i]
 
         return total_price
+
