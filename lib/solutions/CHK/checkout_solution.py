@@ -114,9 +114,3 @@ class CheckoutSolution:
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
-
-
-
-
-
-
