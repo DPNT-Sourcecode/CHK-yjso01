@@ -88,18 +88,18 @@ class CheckoutSolution:
         # 3N get one M free
         count_N = count[ord("N") - 65]
         count_M = count[ord("M") - 65]
-        if count_N >= 3:
-            special_offer_3N = count_N // 3 * 40
-            price_M = count_M - count_N // 3
-            if price_M < 0:
-                price_M = 0
+        
+        free_M = count_N // 3
+
+        if free_M > count_M:
+            price_M, special_offer_M = 0, 0
         else:
-            special_offer_3N = 0
-            price_M = count_M
+            price_M = (count_M - free_M) * 15
 
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
+
 
 
 
