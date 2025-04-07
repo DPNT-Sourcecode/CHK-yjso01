@@ -106,6 +106,7 @@ class CheckoutSolution:
                 price_M, special_offer_M = 0, 0
             else:
                 price_M = (count_M - free_M) * 15
+                special_offer_M = 0
         else:
             price_M = count_M * 15
             special_offer_M = 0
@@ -178,7 +179,7 @@ class CheckoutSolution:
         total_price += total_V
 
         for i in range(26):
-            if count[i] > 0 and not in count[i] in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V"]:
+            if count[i] > 0 and chr(i+65) not in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V"]:
                 total_price += count[i] * prices[i]
 
         return total_price
