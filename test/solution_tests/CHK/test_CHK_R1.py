@@ -32,4 +32,3 @@ def test_invalid_input():
     assert CheckoutSolution().checkout("AABCG") == -1
     assert CheckoutSolution().checkout("123") == -1
     assert CheckoutSolution().checkout("") == 0
-

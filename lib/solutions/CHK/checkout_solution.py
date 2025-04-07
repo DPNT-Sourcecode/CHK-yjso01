@@ -12,30 +12,33 @@ class CheckoutSolution:
         # 2F get 1F free
     # illegal input returns -1
 
-        count_A = 0
-        count_B = 0
-        count_C = 0
-        count_D = 0
-        count_E = 0
-        count_F = 0
+        # count_A = 0
+        # count_B = 0
+        # count_C = 0
+        # count_D = 0
+        # count_E = 0
+        # count_F = 0
+        count = [0] * 26
+
         total_price = 0
 
         # count the number of each item
-        for item in skus:
-            if item == "A":
-                count_A += 1
-            elif item == "B":
-                count_B += 1
-            elif item == "C":
-                count_C += 1
-            elif item == "D":
-                count_D += 1
-            elif item == "E":
-                count_E += 1
-            elif item == "F":
-                count_F += 1
-            else:
-                return -1
+
+        # for item in skus:
+        #     if item == "A":
+        #         count_A += 1
+        #     elif item == "B":
+        #         count_B += 1
+        #     elif item == "C":
+        #         count_C += 1
+        #     elif item == "D":
+        #         count_D += 1
+        #     elif item == "E":
+        #         count_E += 1
+        #     elif item == "F":
+        #         count_F += 1
+        #     else:
+        #         return -1
         
         # calculate the total price
         free_B = count_E // 2
@@ -81,7 +84,3 @@ class CheckoutSolution:
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
-
-
-
-
