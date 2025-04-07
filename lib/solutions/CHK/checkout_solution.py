@@ -182,10 +182,19 @@ class CheckoutSolution:
 
         # buy any 3 of (S,T,X,Y,Z) for 45 offer
         count_S = count[ord("S") - 65]
+        s_price = prices[ord("S") - 65]
+
         count_T = count[ord("T") - 65]
+        t_price = prices[ord("T") - 65]
+
         count_X = count[ord("X") - 65]
+        x_price = prices[ord("X") - 65]
+
         count_Y = count[ord("Y") - 65]
+        y_price = prices[ord("Y") - 65]
+
         count_Z = count[ord("Z") - 65]
+        z_price = prices[ord("Z") - 65]
 
         item_group = [count for count in [count_S, count_T, count_X, count_Y, count_Z]]
 
@@ -195,4 +204,5 @@ class CheckoutSolution:
                 total_price += count[i] * prices[i]
 
         return total_price
+
 
