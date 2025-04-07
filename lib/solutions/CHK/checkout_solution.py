@@ -27,26 +27,15 @@ class CheckoutSolution:
             if ord(item) < 65 or ord(item) > 90:
                 return -1
             count[ord(item) - 65] += 1
-        # for item in skus:
-        #     if item == "A":
-        #         count_A += 1
-        #     elif item == "B":
-        #         count_B += 1
-        #     elif item == "C":
-        #         count_C += 1
-        #     elif item == "D":
-        #         count_D += 1
-        #     elif item == "E":
-        #         count_E += 1
-        #     elif item == "F":
-        #         count_F += 1
-        #     else:
-        #         return -1
         
         # calculate the total price
-        free_B = count[ord("E") - 65] // 2
-    
+        
+        # how many free B's from E offer
+        count_E = count[ord("E") - 65]
+        free_B = count_E // 2
+
         # check for 5A's, 3A's and A's
+        count_A = count[ord("A") - 65]
         if count_A >= 5:
             special_offer_5A = count_A // 5 * 200
             if count_A % 5 >= 3:
@@ -87,4 +76,5 @@ class CheckoutSolution:
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
+
 
