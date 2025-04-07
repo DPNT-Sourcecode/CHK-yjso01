@@ -57,10 +57,38 @@ class CheckoutSolution:
             price_F = count_F * 10
 
         # 5H for 45 and 10H for 80 offer
+        count_H = count[ord("H") - 65]
+
+        if count_H >= 10:
+            special_offer_10H = count_H // 10 * 80
+            if count_H % 10 >= 5:
+                special_offer_5H = (count_H % 10) // 5 * 45
+                price_H = count_H % 10 % 5 * 10
+            else:
+                special_offer_5H = 0
+                price_H = count_H % 10 * 10
+        else:
+            if count_H >= 5:
+                special_offer_10H = 0
+                special_offer_5H = count_H // 5 * 45
+                price_H = count_H % 5 * 10
+            else:
+                special_offer_10H, special_offer_5H = 0, 0
+                price_H = count_H * 10
+
+        # 2k for 150 offer
+        count_K = count[ord("K") - 65]
+        if count_K >= 2:
+            special_offer_2K = count_K // 2 * 150
+            price_K = count_K % 2 * 80
+        else:
+            special_offer_2K = 0
+            price_K = count_K * 80
 
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
+
 
 
 
