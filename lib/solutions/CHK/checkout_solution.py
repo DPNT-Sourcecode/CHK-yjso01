@@ -203,19 +203,12 @@ class CheckoutSolution:
 
         total_price += num_of_groups * 45
 
-        remaining_items = (count_S + count_T + count_X + count_Y + count_Z) % 3
-
         remainder = sorted_items[num_of_groups*3:]
         if len(remainder) > 0:
             total_price += sum(remainder)
 
         for i in range(26):
-            if count[i] > 0 and chr(i+65) not in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V"]:
+            if count[i] > 0 and chr(i+65) not in ["A", "B", "E", "F", "H", "K", "M", "N", "P", "Q", "R", "U", "V", "S", "T", "X", "Y", "Z"]:
                 total_price += count[i] * prices[i]
 
         return total_price
-
-
-
-
-
