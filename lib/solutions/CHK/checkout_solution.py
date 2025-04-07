@@ -196,7 +196,14 @@ class CheckoutSolution:
         count_Z = count[ord("Z") - 65]
         z_price = prices[ord("Z") - 65]
 
-        item_group = [count for count in [count_S, count_T, count_X, count_Y, count_Z]]
+        item_group = [[s_price]*count_S, [t_price]*count_T, [x_price]*count_X, [y_price]*count_Y, [z_price]*count_Z]
+        sorted_items = sorted(item_group, reverse=True)
+
+        num_of_groups = (count_S + count_T + count_X + count_Y + count_Z) // 3
+
+        total_price += num_of_groups * 45
+
+        remaining_items = (count_S + count_T + count_X + count_Y + count_Z) % 3
 
 
         for i in range(26):
@@ -204,5 +211,6 @@ class CheckoutSolution:
                 total_price += count[i] * prices[i]
 
         return total_price
+
 
 
