@@ -6,6 +6,7 @@ def test_individual_items():
     assert CheckoutSolution().checkout("C") == 20
     assert CheckoutSolution().checkout("D") == 15
     assert CheckoutSolution().checkout("E") == 40
+    assert CheckoutSolution().checkout("F") == 10
 
 def test_special_offers():
     assert CheckoutSolution().checkout("AAA") == 130
@@ -15,6 +16,7 @@ def test_special_offers():
     assert CheckoutSolution().checkout("AAAAAA") == 250
     assert CheckoutSolution().checkout("AAAAAAA") == 300
     assert CheckoutSolution().checkout("AAAAAAAAA") == 380
+    assert CheckoutSolution().checkout("FFF") == 20
 
 def test_combined_items():
     assert CheckoutSolution().checkout("ABCD") == 115
@@ -28,3 +30,4 @@ def test_invalid_input():
     assert CheckoutSolution().checkout("AABCF") == -1
     assert CheckoutSolution().checkout("123") == -1
     assert CheckoutSolution().checkout("") == 0
+

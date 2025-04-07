@@ -72,7 +72,7 @@ class CheckoutSolution:
         price_E = count_E * 40
 
         if count_F >= 3:
-            special_offer_F = count_F // 3
+            special_offer_F = 2 * (count_F // 3) * 10
             price_F = count_F % 3 * 10
         else:
             special_offer_F = 0
@@ -81,6 +81,7 @@ class CheckoutSolution:
         total_price = special_offer_5A + special_offer_3A + price_A + special_offer_B + price_B + price_C + price_D + price_E + special_offer_F + price_F
 
         return total_price
+
 
 
 
